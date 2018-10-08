@@ -20,7 +20,8 @@ class Application extends Component {
                 { item: 'Bread', done: false },
                 { item: 'Almond butter', done: true },
                 { item: 'Jam', done: false },
-            ]
+            ],
+            defaultTodoMessage: 'Start adding Todo item...'
         };
     }
 
@@ -49,7 +50,7 @@ class Application extends Component {
                     <Heading />
                 </Header>
                 <Body>
-                    <AddTodo addTodo={this.addTodo} />
+                    <AddTodo addTodo={this.addTodo} todoMessage={this.state.defaultTodoMessage} />
                     <Todos todos={this.state.todos} removeTodo={this.removeTodo} toggleDone={this.toggleDone} /> 
                 </Body>
             </Container>

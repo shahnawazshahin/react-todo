@@ -5,6 +5,7 @@ class Textbox extends Component {
         return (
             <input
                 type='text'
+                placeholder={this.props.placeholder}
                 value={this.props.value}
                 onChange={this.props.onChange} />
         );

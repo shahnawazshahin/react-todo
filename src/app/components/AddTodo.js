@@ -29,7 +29,7 @@ class AddTodo extends Component {
     render() {
         return (
             <Form onSubmit={(event) => this.addTodo(event)}>
-                <Textbox value={this.state.todoItem} onChange={(event) => this._handleChange(event)}/>
+                <Textbox placeholder={this.props.todoMessage} value={this.state.todoItem} onChange={(event) => this._handleChange(event)}/>
                 <Button>Add Todo</Button>
             </Form>
         )
